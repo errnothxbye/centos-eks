@@ -30,7 +30,7 @@ def pod_calc(eni_file, tmp_eni_file, aws_eni_doc)
     FileUtils.rm_rf(tmp_eni_file)
     @LOGGER.info("Generated #{eni_file}") and true
   rescue TypeError, IOError, Errno::ENOENT, Errno::EACCES, Errno::ENOTDIR
-    @LOGGER.error($!. message) and false
+    @LOGGER.error($!.message) and false
   end
 end
 
