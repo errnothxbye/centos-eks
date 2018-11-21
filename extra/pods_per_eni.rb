@@ -16,6 +16,7 @@ eni_file = "/etc/kubernetes/misc/eni-max-pods.txt"
 # lok'tar ogar
 def pod_calc(eni_file, tmp_eni_file, aws_eni_doc)
   begin
+    FileUtils.mkdir_p('/etc/kubernetes/misc') unless File.exists?('/etc/kubernetes/misc')
     # Search for the table with numbers on the aws_eni_doc page
     aws_eni_doc.css('table:not([summary=Breadcrumbs])').search('tr').each do |row|
       cells = row.css('td').map { |cell| cell.text.strip }
