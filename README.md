@@ -7,4 +7,6 @@ can be sourced at the below link.
 
 https://medium.com/errnothxbye/centos-7-with-cri-o-on-eks-ae9684aff764
 
-
+# extras script
+The script in *extras* directory fetches the table contents available via the available [URL](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-eni.html#AvailableIpPerENI) 
+and generates a file with values that the kubelet can consume in order to set *--max-pods* argument properly
